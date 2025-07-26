@@ -72,23 +72,30 @@
 .custom-checkbox {
     appearance: none;
     -webkit-appearance: none;
-    width: 6vw; /* Gunakan persen layar, bukan angka tetap */
-    max-width: 30px;
-    height: 6vw;
-    max-height: 30px;
-
-    background-color: transparent;
+    width: 24px;
+    height: 24px;
     border: 2px solid white;
     border-radius: 4px;
+    background-color: transparent;
     cursor: pointer;
-    vertical-align: middle;
+    position: relative;
+}
+
+.custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 39px;
+    height: 28px;
+    background-image: url('https://raw.githubusercontent.com/sinkarkess/subdomain/refs/heads/main/ceklis1.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-image 0.2s ease-in-out;
+    pointer-events: none;
 }
     .custom-checkbox:checked {
-        background-image: url('https://raw.githubusercontent.com/sinkarkess/subdomain/refs/heads/main/ceklis1.png');
+        background-image: url('');
     }
 .custom-checkbox {
     width: 30px;
@@ -99,7 +106,7 @@
 }
 
 .custom-checkbox:checked {
-    background-image: url('https://raw.githubusercontent.com/sinkarkess/subdomain/refs/heads/main/ceklis1.png');
+    background-image: url('');
     background-size: 130%; /* Gambar lebih besar dari kotak */
 	    box-shadow: 0 0 15px #ffffff;
 }
